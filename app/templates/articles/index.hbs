@@ -1,0 +1,18 @@
+<table class="primary full-width">
+  <thead>
+    <tr>
+      <th> Description </th>
+      <th> Notes </th>
+      <th> Borrowed Since </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |article|}}
+      {{articles/article-row
+        article=article
+        save="save"
+        articleStates=possibleStates}}
+    {{/each}}
+  </tbody>
+</table>
